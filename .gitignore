@@ -16,3 +16,4 @@ build/
 # Env files
 .env
 .env.*
+catgatekeeper/
