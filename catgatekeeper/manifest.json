@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "CatGatekeeper",
+  "version": "1.0",
+  "description": "Block distracting sites. Cat approved.",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icons/icon2.png"
+  },
+  "icons": {
+    "16": "icons/icon2.png",
+    "48": "icons/icon2.png",
+    "128": "icons/icon2.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["animated-cat-tail.gif", "cat-bg.gif"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
